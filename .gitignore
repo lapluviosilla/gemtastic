@@ -5,4 +5,5 @@ tmp/**/*
 *~
 *.tmp
 Thumbs.db
+.rspec
 .idea
