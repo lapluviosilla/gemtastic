@@ -6,10 +6,9 @@ gem 'rails', '3.0.0'
 # Test gems without generators
 group :test do
   gem 'rr', '~> 1.0.0'
-  gem 'fabrication', '~> 0.9.0'
   gem 'capybara', '~> 0.3.9'
   gem 'launchy', '~> 0.3.7'
-  gem 'webrat', '~> 0.7.2.beta.1', :require => nil
+  gem 'webrat', '~> 0.7.2.beta.2', :require => nil
   gem 'azebiki', '~> 0.0.1', :require => nil
   gem 'database_cleaner', '~> 0.5.2'
   gem 'remarkable_activemodel', '~> 4.0.0.alpha4'
@@ -25,9 +24,14 @@ group :development, :test do
   gem 'rspec-core', '~> 2.0.0'
   gem 'rspec-expectations', '~> 2.0.0'
   gem 'rspec-rails', '~> 2.0.0'
-  gem 'steak', '>= 1.0.0.beta.2'
-  gem 'spork', :git => "git://github.com/timcharper/spork.git"
+  gem 'steak', '>= 1.0.0.rc.1'
+
+  gem 'spork', '>= 0.9.0.rc2'
 end
+
+# Special gems that get reloaded by spork on each run ( no auto require ) (Microoptimization)
+gem 'fabrication', '~> 0.9.0', :require => nil, :group => :test
+gem 'fabrication', '~> 0.9.0', :group => :development
 
 gem 'rails3-generators', '~> 0.14.0', :group => :development
 
