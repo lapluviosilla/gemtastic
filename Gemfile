@@ -2,6 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
+# UI
+gem 'haml', '~> 3.0.21'
+gem 'simple_form', '~> 1.2.2'
+
+# Controller
+gem 'inherited_resources', '~> 1.1.2'
+
 # DB
 gem 'mongoid', '~> 2.0.0.beta.19'
 # Bson and bson_ext have to be the same version
