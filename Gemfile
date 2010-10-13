@@ -2,6 +2,11 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
+# DB
+gem 'mongoid', '~> 2.0.0.beta.19'
+# Bson and bson_ext have to be the same version
+gem 'bson', '~> 1.1'
+gem 'bson_ext', '~> 1.1'
 
 # Test gems without generators
 group :test do
